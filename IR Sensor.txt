@@ -1,0 +1,13 @@
+#define sensor A0
+
+void setup() {
+  serial.begin()  // setup code here, to run once:
+
+}
+
+void loop() {
+  int value = analogRead(sensor); //read value from sensor
+  float distance = value*(3.3/1024); //calculates distance in centimeter
+  Serial.print("Distance :"); //displays message Distance
+  Serial.print(distance);  //Displays value of distance
+} 
